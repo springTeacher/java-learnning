@@ -63,9 +63,9 @@ instance=memory;        //③设置instance指向刚分配的内存地址
 ctorInstance(memory);   //②初始化对象
 ```
 单线程下执行时序图如下：
-![执行的示意图](https://img-blog.csdn.net/20170805140022629?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd3BiOTI=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
+![执行的示意图](https://github.com/springTeacher/java-learnning/blob/master/src/main/resources/image/20170805140022629.png)
 多线程下执行时序图：
-![执行的示意图](https://img-blog.csdn.net/20170805140035078?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd3BiOTI=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
+![执行的示意图](https://github.com/springTeacher/java-learnning/blob/master/src/main/resources/image/20170805140035078.png)
 ```
 2,3两步骤可能会发生重排序，此时多线程情况下另外一个线程可能会看到一个还没有被初始化的对象。
 加了volatile将不允许2,3两步重排序。
@@ -90,7 +90,7 @@ public class InstanceFactory {
   }
 ```
 执行的示意图:
-![执行的示意图](https://img-blog.csdn.net/20170805140126011?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd3BiOTI=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center)
+![执行的示意图](https://github.com/springTeacher/java-learnning/blob/master/src/main/resources/image/20170805140126011.png)
 ```
 该方案的实质是，允许②和③进行重排序，但不允许非构造线程（此处是B线程）“看到”这个重排序。
 
