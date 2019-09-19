@@ -12,6 +12,12 @@
 
     <dependencies>
 
+        <dependency>
+            <groupId>com.xiaoniu.commons.alipay</groupId>
+            <artifactId>xiaoniu-alipay-sdk</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
 
     </dependencies>
 

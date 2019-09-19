@@ -14,11 +14,8 @@ public class Singleton {
         /**单类对象*/
         INSTANCE;
 
-        private Singleton instance = null;
+        private Singleton instance = new Singleton();
 
-        HolderEnum(){
-            instance = new Singleton();
-        }
 
         public Singleton getInstance(){
             return instance;
