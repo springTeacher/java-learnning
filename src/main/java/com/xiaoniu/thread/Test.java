@@ -1,6 +1,7 @@
 package com.xiaoniu.thread;
 
-import java.math.BigDecimal;
+import java.util.*;
+import java.util.stream.IntStream;
 
 /**
  * @author lihoujing
@@ -11,16 +12,14 @@ public class Test {
 
     public static void main(String[] args) {
 
-        Integer a = 300;
-        Integer b = 300;
-        System.out.println(a == b);
-        System.out.println(a.equals(b));
+        int[] data = {2,1,6,4,3,9,8};
+        IntStream.of(data).min();
 
 
-        BigDecimal bigDecimal = BigDecimal.valueOf(34.2);
-        bigDecimal.setScale(2,BigDecimal.ROUND_HALF_DOWN);
 
     }
+
+
 
 
 
