@@ -1,5 +1,6 @@
 package com.web.configuration;
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -27,6 +28,8 @@ public class AppConfig {
         ObjectMapper objectMapper = new ObjectMapper();
         SimpleDateFormat smt = new SimpleDateFormat(DATE_TIME_PATTERN);
         objectMapper.setDateFormat(smt);
+        //设置全局忽略没有的属性 代替 @JsonIgnoreProperties(ignoreUnknown = true)
+        objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES,false);
         mappingJackson2HttpMessageConverter.setObjectMapper(objectMapper);
         //设置中文编码格式
         List<MediaType> list = new ArrayList<>();

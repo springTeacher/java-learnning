@@ -10,7 +10,7 @@ import java.util.Date;
  * @author lihoujing
  * @date 2019/10/21 14:34
  */
-@JsonIgnoreProperties(ignoreUnknown = true)
+
 public class HelloBO implements Serializable {
 
     private static final long serialVersionUID = -5376828872106650235L;

@@ -1,7 +1,9 @@
 package com.xiaoniu.jdk;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.stream.Collectors;
 
 /**
  * @author lihoujing
@@ -38,30 +40,38 @@ public class ArrayUtils {
 
 
     public static void main(String[] args) {
-        long start = System.currentTimeMillis();
-        List<String> list = new CopyOnWriteArrayList<>();
-        for (int i = 0; i < 200000; i++) {
-            list.add("list"+i);
-        }
-        long end = System.currentTimeMillis();
-        System.out.println(end - start);
+        List<User> userList = new ArrayList<>();
+        User user1 = new User();
+        user1.setAge(10);
+        userList.add(user1);
+        User user2 = new User();
+        user2.setAge(20);
+        userList.add(user2);
+        User user3 = new User();
+        user3.setAge(25);
+        userList.add(user3);
+
+        int ageSum = userList.parallelStream().mapToInt(User::getAge).sum();
+
 
 
     }
 
 
+}
 
 
+class User{
 
 
+    private Integer age;
 
 
+    public Integer getAge() {
+        return age;
+    }
 
-
-
-
-
-
-
-
+    public void setAge(Integer age) {
+        this.age = age;
+    }
 }
