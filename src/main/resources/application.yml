@@ -1,2 +1,10 @@
 server:
-  port: 80
+  port: 8076
+
+
+spring:
+  redis:
+    database: 2
+    password: fzcfQwuMH2q
+    host: 172.16.0.187
+    port: 6379

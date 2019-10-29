@@ -1,8 +1,5 @@
 package com.web.bo;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import java.io.Serializable;
 import java.util.Date;
 
@@ -10,7 +7,6 @@ import java.util.Date;
  * @author lihoujing
  * @date 2019/10/21 14:34
  */
-
 public class HelloBO implements Serializable {
 
     private static final long serialVersionUID = -5376828872106650235L;
@@ -51,5 +47,15 @@ public class HelloBO implements Serializable {
 
     public void setDate(Date date) {
         this.date = date;
+    }
+
+
+    @Override
+    public String toString() {
+        return "HelloBO{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", date=" + date +
+                '}';
     }
 }

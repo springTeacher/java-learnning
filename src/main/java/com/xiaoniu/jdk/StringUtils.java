@@ -1,6 +1,7 @@
 package com.xiaoniu.jdk;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  *
@@ -14,16 +15,18 @@ public class StringUtils {
     public static void main(String[] args) {
 
 
-
-        List<String> list = new ArrayList<>();
-        list.add("陈超");
-        list.add("李厚京");
-
-        String s = list.get(0);
+        Integer[] arr = {1,4,76,8,9,5,3,3};
 
 
+        List<Integer> list = new ArrayList<>();
+        list.add(23);
+        Iterator<Integer> iterator = list.iterator();
+        while (iterator.hasNext()){
+            Integer next = iterator.next();
 
+                iterator.remove();
 
+        }
     }
 
 

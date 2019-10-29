@@ -116,3 +116,14 @@ Servlet接口
 
 
 ```
+
+###问题2：
+```
+springAOP环绕通知必须要执行  joinPoint.proceed();或者带参数的那个joinPoint.proceed(args);
+否则请求不到controller.
+
+问题了解：
+  @Around注解可以用来在调用一个具体方法前和调用后来完成一些具体的任务。拦截器、事务、日志、权限验证
+
+
+```
