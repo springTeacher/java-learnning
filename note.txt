@@ -1,0 +1,42 @@
+1.@EnableConfigurationProperties的作用？
+ 配合 @ConfigurationProperties使用将加了 @ConfigurationProperties 注解的类加入到spring 容器中，相当于@Component.
+
+2.Spring Boot MyBatis配置Druid多数据源?
+ Spring Boot中配置MyBatis多数据源的关键在于创建SqlSessionFactory的时候为其分配不同的数据源。
+
+
+3.@RestControllerAdvice和@ExceptionHandler(Exception.class)配合使用，方法参数中用相应的自定义异常接收；
+当是Exception.class，表示全局异常。
+
+4.通过过滤器我们只可以获取到servletRequest对象，所以并不能获取到方法的名称，所属类，参数等额外的信息。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

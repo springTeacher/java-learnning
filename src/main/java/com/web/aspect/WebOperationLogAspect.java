@@ -37,13 +37,6 @@ public class WebOperationLogAspect {
     @Around("pointCut()")
     public Object before(ProceedingJoinPoint joinPoint) throws Throwable {
 
-        MethodSignature signature = (MethodSignature) joinPoint.getSignature();
-
-        Method method = signature.getMethod();
-
-        Object[] args = joinPoint.getArgs();
-        System.out.println("方法执行之前："+args[0]);
-
         return joinPoint.proceed();
     }
 

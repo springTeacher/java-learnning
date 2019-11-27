@@ -8,6 +8,8 @@ public class ArrayUtils {
 
 
 
+
+
     public static int binarySearch(int[] a, int key){
         return binarySearch0(a, 0, a.length, key);
     }
@@ -55,12 +57,14 @@ public class ArrayUtils {
     }
 
     public static void main(String[] args) {
-        int[] arrays = {1,3,5,7,8,9,2};
 
-        int[] ints = twoSum(arrays, 3);
 
-        System.out.println(ints[0]);
-        System.out.println(ints[1]);
+        try {
+            int a = 1/0;
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+            System.out.println(e);
+        }
 
     }
 
