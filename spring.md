@@ -11,7 +11,7 @@ bean之前会往singletonsCurrentlyInCreation Set放到集合中(表示当前正
   
 spring实例化的bean: 不是abstract,是singleton,不是lazy
 
-spring声明周期回调：先MyBeanPostProcessor(后置处理器)，再InitializingBean(接口)，再initMethod（@Bean）。
+spring声明周期回调：先MyBeanPostProcessor(后置处理器)，再@PostConstruct，再InitializingBean(接口)，再initMethod（@Bean）。
 
 
 bean工厂的后置处理器的作用:修改bean工厂;

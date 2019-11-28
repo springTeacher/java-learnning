@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
  */
 @ComponentScan("com.spring")
 @Configuration
-public class AppConfig {
+public class AppConfig1 {
 
 
 
