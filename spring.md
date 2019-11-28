@@ -4,6 +4,10 @@
   a.循环依赖支持两个单例的bean,一个单例一个原型的bean相互依赖；不支持两个原型的bean相互依赖；
   b.循环依赖支持setter方法注入，不支持构造方法注入。
   
+在doGetBean方法里有两个getSingleton方法，第一个getSingleton(String beanName)方法获取不到
+接着执行第二个getSingleton(String beanName, ObjectFactory<?> singletonFactory)，在创建
+bean之前会往singletonsCurrentlyInCreation Set放到集合中(表示当前正在创建)，接着创建bean,
+创建完成后进行属性填充完成后续的声明周期，在进行属性填充的时候，发现依赖了A,
   
 spring实例化的bean: 不是abstract,是singleton,不是lazy
 
@@ -30,6 +34,10 @@ spring的Proxy模式在aop中有体现，比如JdkDynamicAopProxy和Cglib2AopPro
 2.@Autowired是spring自带的，@Resource是JSR250标准。
 3.通过不同的后置处理器解析的，@Autowired是AutowiredAnnotationBeanPostProcessr解析的，
 @Resource是CommonAnnotationBeanPostProcessor解析的。
+
+
+spring自动装配的模型有4种：no、bytype、byname、constructor 默认no;
+
 
 
 循环依赖:getBean()，正在创建，3个map
