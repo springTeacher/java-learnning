@@ -48,6 +48,13 @@
 
 
 
+        <!-- 支付宝支付组件 -->
+        <!--<dependency>-->
+            <!--<groupId>com.alipay.sdk</groupId>-->
+            <!--<artifactId>alipay-sdk-java</artifactId>-->
+            <!--<version>4.8.62.ALL</version>-->
+        <!--</dependency>-->
+
 
 
     </dependencies>
