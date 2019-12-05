@@ -1,6 +1,5 @@
 package com.spring.beans;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -10,19 +9,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class Teacher {
 
-    @Autowired
-    private Student student2;
-
-
 
     public Teacher(){
         System.out.println("Teacher constructor");
     }
 
 
-    public Student getStudent() {
-        return student2;
-    }
 
 
 }

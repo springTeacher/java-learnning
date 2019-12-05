@@ -10,12 +10,19 @@ import org.springframework.stereotype.Component;
 @Component
 public class User {
 
+
     @Autowired
-    private Order order;
+    private Teacher teacher;
+
 
 
     public User() {
-
         System.out.println("user");
+    }
+
+
+
+    public void getTeacher(){
+        System.out.println(teacher);
     }
 }

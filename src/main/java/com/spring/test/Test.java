@@ -1,6 +1,6 @@
 package com.spring.test;
 
-import com.spring.configuration.AppConfig1;
+import com.spring.configuration.SpringAppConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
@@ -11,13 +11,8 @@ public class Test {
 
     public static void main(String[] args) {
 
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig1.class);
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringAppConfig.class);
 
-//
-//        Teacher teacher = context.getBean(Teacher.class);
-//
-//
-//        System.out.println(teacher.getStudent());
 
 
     }

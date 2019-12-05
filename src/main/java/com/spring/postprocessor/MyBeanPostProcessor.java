@@ -14,22 +14,11 @@ public class MyBeanPostProcessor implements BeanPostProcessor {
 
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
-
-        if("person".equals(beanName)){
-            System.err.println("MyBeanPostProcessor postProcessBeforeInitialization person.....");
-        }
-
         return bean;
     }
 
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-
-        if("person".equals(beanName)){
-            System.err.println("MyBeanPostProcessor postProcessAfterInitialization person.....");
-        }
-
-
         return bean;
     }
 }
