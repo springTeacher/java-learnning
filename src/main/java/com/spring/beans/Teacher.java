@@ -16,5 +16,12 @@ public class Teacher {
 
 
 
+    public Teacher(String name){
+        this();
+        System.out.println(name);
+    }
+
+
+
 
 }

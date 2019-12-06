@@ -1,6 +1,7 @@
 package com.spring.test;
 
 import com.spring.configuration.SpringAppConfig;
+import com.web.configuration.AppConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 /**
@@ -11,7 +12,7 @@ public class Test {
 
     public static void main(String[] args) {
 
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringAppConfig.class);
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringAppConfig.class, AppConfig.class);
 
 
 
