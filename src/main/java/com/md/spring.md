@@ -77,3 +77,48 @@ spring源码中在创建bean的时候先创建这个bean的对象，
 
 ​
 ```
+
+
+```
+spring初始化过程：
+1.调用this(); 实例化reader,注册5个类的后置处理器，添加到beanDefinitionMaps中；实例化scanner，扫描@Compent；
+registry.registerBeanDefinition(beanName, definition);
+2.调用register(annotatedClasses)，注册配置类的registry.registerBeanDefinition(beanName, definitionHolder.getBeanDefinition());
+3.
+//执行bean工厂的后置处理器  postProcessor.postProcessBeanDefinitionRegistry(registry); 代理配置类，包括@Import...
+invokeBeanFactoryPostProcessors(beanFactory);
+//注册bean的后置处理器  this.beanPostProcessors.add(beanPostProcessor); 添加到list当中
+registerBeanPostProcessors(beanFactory);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```

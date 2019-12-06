@@ -1,6 +1,8 @@
 package com.spring.beans;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContextAware;
+import org.springframework.context.EnvironmentAware;
 import org.springframework.stereotype.Component;
 
 /**
@@ -11,14 +13,20 @@ import org.springframework.stereotype.Component;
 public class User {
 
 
-    @Autowired
     private Teacher teacher;
 
-
-
-    public User() {
-        System.out.println("user");
+    public User(Teacher teacher){
+        this.teacher = teacher;
     }
+
+
+    @Autowired
+    private EnvironmentAware environmentAware;
+
+    @Autowired
+    private ApplicationContextAware applicationContextAware;
+
+
 
 
 
