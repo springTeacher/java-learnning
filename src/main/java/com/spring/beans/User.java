@@ -20,13 +20,6 @@ public class User {
     }
 
 
-    @Autowired
-    private EnvironmentAware environmentAware;
-
-    @Autowired
-    private ApplicationContextAware applicationContextAware;
-
-
 
 
 
