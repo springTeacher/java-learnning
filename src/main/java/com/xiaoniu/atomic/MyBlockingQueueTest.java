@@ -21,6 +21,9 @@ import java.util.concurrent.*;
  * contains(Object o): 判断队列中是否拥有该值。
  * drainTo(Collection c): 将队列中值，全部移除，并发设置到给定的集合中。
  *
+ *
+ * BlockingQueue通过ReentrantLock保证线程安全的
+ *
  * @author lhj
  * @date 2019/12/9 21:01
  */

@@ -7,4 +7,16 @@ package com.xiaoniu.atomic;
  * @date 2019/12/9 19:03
  */
 public class MyBlockingQueue {
+
+
+    public static void main(String[] args) {
+
+    }
+
+    static final int HASH_BITS = 0x7fffffff;
+
+
+    static final int spread(int h) {
+        return (h ^ (h >>> 16)) & HASH_BITS;
+    }
 }
