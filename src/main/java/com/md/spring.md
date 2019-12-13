@@ -94,8 +94,12 @@ registerBeanPostProcessors(beanFactory);
 
 
 
+初始化bean步骤大体上可以分为四步:
 
-
+1. 对实现Aware接口对bean的设置。
+2. 依次回调bean后置处理器的postProcessBeforeInitialization方法。
+3. 执行实现了InitializingBean或者用户自定义的init方法方法。
+4. 依次回调bean后置处理器的postProcessAfterInitialization方法。
 
 
 
