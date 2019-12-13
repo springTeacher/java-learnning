@@ -4,13 +4,12 @@ import java.util.Observable;
 import java.util.Observer;
 
 /**
+ * 观察者的update方法是一个回调方法
+ *
  * @author lhj
  * @date 2019/11/29 11:07
  */
 public class Student implements Observer {
-
-
-
 
 
     private String name;

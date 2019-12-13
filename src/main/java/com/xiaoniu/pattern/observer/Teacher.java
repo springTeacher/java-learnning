@@ -3,6 +3,10 @@ package com.xiaoniu.pattern.observer;
 import java.util.Observable;
 
 /**
+ * 被观察者
+ *
+ * 被观察者持有观察者的实例
+ *
  * @author lhj
  * @date 2019/11/29 11:06
  */

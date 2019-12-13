@@ -2,6 +2,7 @@ server:
   port: 8076
 
 
+
 #spring:
 #  redis:
 #    database: 2
