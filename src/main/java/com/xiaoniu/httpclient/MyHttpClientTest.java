@@ -1,10 +1,12 @@
 package com.xiaoniu.httpclient;
 
 import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
 import org.apache.http.ParseException;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.protocol.HttpClientContext;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
@@ -18,6 +20,8 @@ import java.io.IOException;
 public class MyHttpClientTest {
 
 
+    private static CloseableHttpClient httpclient = HttpClients.createDefault();
+
     public static void main(String[] args) {
         get();
 
@@ -25,13 +29,15 @@ public class MyHttpClientTest {
 
 
     public static void get() {
-        CloseableHttpClient httpclient = HttpClients.createDefault();
         try {
             // 创建httpget.
             HttpGet httpget = new HttpGet("http://www.baidu.com/");
             System.out.println("executing request " + httpget.getURI());
             // 执行get请求.
             CloseableHttpResponse response = httpclient.execute(httpget);
+
+
+            HttpEntity execute = httpclient.execute(httpget, HttpResponse::getEntity, HttpClientContext.create());
             try {
                 // 获取响应实体
                 HttpEntity entity = response.getEntity();
