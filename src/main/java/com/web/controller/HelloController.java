@@ -62,6 +62,7 @@ public class HelloController {
 
     @GetMapping("/test")
     public String testSendPost(String data){
+       int a = 1/0;
         System.out.println("执行controller方法...");
         return "测试成功:"+data;
     }

@@ -15,6 +15,7 @@ public class TimeInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+        System.out.println("【拦截器】开始 preHandle");
         request.setAttribute("startTime", System.currentTimeMillis());
         return true;
     }
