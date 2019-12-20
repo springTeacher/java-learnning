@@ -67,5 +67,30 @@ Redis的Master-Slave支持链式结构，Slave可以连接Slave，成为Slave的
 
 
 
+###linux安装Mongodb
+```
+1.在线下载：wget https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-3.4.10.tgz
+2.解压：tar -zxvf mongodb-linux-x86_64-3.4.10.tgz
+3.配置环境变量：vim /root/.bash_profile  
+export MONGO_DB=/usr/local/mongodb
+export PATH=$PATH:$MONGO_DB/bin
+执行生效：source /root/.bash_profile
+4.创建数据库目录：(mongodb启动会将数据存在该目录，但是不会创建，故需要手动创建)
+创建目录树：mkdir -p /data/db
+5.启动：bin目录下执行 nohup ./mongod &  后台启动
+6.进入MongoDB后台管理 Shell：bin目录 ./mongo
+7.创建用户和密码:
+use admin
+db.createUser(
+  {
+    user: "myAdmin",
+    pwd: "admin123",
+    roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]
+  }
+)  
+```
+
+
+
 
 
