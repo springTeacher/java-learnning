@@ -3,9 +3,15 @@ server:
 
 
 
-#spring:
-#  redis:
-#    database: 2
-#    password: fzcfQwuMH2q
-#    host: 172.16.0.187
-#    port: 6379
+spring:
+  redis:
+    database: 2
+    password: root
+    host: 139.196.100.40
+    port: 6379
+
+#springboot文件上传文件大小限制配置
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB

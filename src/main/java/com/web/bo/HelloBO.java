@@ -22,6 +22,8 @@ public class HelloBO implements Serializable {
      */
     private Integer age;
 
+
+
     private Date date;
 
 

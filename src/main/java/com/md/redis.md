@@ -36,3 +36,55 @@ cluster可以说是sentinel和主从模式的结合体，通过cluster可以实�
 
 
 ```
+
+###Redis安装教程
+```
+1.下载： wget http://download.redis.io/releases/redis-4.0.9.tar.gz命令即可在线下载redis安装包;
+2.解压：tar -zxvf redis-4.0.9.tar.gz;
+3.编译：进入到redis解压目录，执行make命令;
+  编译完成后能看到src,conf等目录。
+4.安装：进入到src目录，执行make install进行redis的安装;
+5.部署：为了方便管理，创建etc,bin目录，将redis.conf移到etc目录，
+mkreleasehdr.sh  redis-benchmark  redis-check-aof  redis-check-rdb  redis-cli  redis-server移动到bin目录；
+修改redis.conf文件：
+   bind 127.0.0.1 改成指定ip;
+   daemonize 改为yes,表示支持后台启动。
+6.再次启动redis,并指定配置文件：
+   ./redis-server ../etc/redis.conf 启动redis
+7.客户端连接：
+   ./redis-cli
+   ./redis-cli shutdown停止服务
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

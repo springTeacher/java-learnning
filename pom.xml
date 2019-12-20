@@ -28,6 +28,13 @@
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
 
+
+        <dependency>
+            <groupId>com.xiaoniu.architecture</groupId>
+            <artifactId>xiaoniu-spring-boot-starter-redis</artifactId>
+            <version>1.2.2.RELEASE</version>
+        </dependency>
+
         <!--<dependency>-->
             <!--<groupId>com.xiaoniu.common.core</groupId>-->
             <!--<artifactId>xiaoniu-spring-redis</artifactId>-->

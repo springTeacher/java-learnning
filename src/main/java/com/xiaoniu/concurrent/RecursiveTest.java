@@ -1,5 +1,7 @@
 package com.xiaoniu.concurrent;
 
+import java.time.Instant;
+import java.time.LocalDate;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.ForkJoinTask;
@@ -15,16 +17,31 @@ public class RecursiveTest {
     // 定义最小区间为10
     private final static int MAX_THRESHOLD = 10;
 
+
     public static void main(String[] args) {
-        final ForkJoinPool forkJoinPool = new ForkJoinPool();
-        ForkJoinTask<Integer> future = forkJoinPool.submit(new CalculateRecursiveTask(1, 100));
-        try {
-            Integer result = future.get();
-            System.out.println(result);
-        } catch (InterruptedException | ExecutionException e) {
-            e.printStackTrace();
-        }
+
+        System.out.println(System.currentTimeMillis());
+        System.out.println(Instant.now().toEpochMilli());
+
+
+
+
+
+
+
+
     }
+
+//    public static void main(String[] args) {
+//        final ForkJoinPool forkJoinPool = new ForkJoinPool();
+//        ForkJoinTask<Integer> future = forkJoinPool.submit(new CalculateRecursiveTask(1, 100));
+//        try {
+//            Integer result = future.get();
+//            System.out.println(result);
+//        } catch (InterruptedException | ExecutionException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
     private static class CalculateRecursiveTask extends RecursiveTask<Integer> {
         // 起始

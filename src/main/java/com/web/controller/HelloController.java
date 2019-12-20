@@ -18,7 +18,7 @@ import java.util.List;
  * @date 2019/10/21 14:33
  */
 @RestController
-@RequestMapping("/")
+@RequestMapping("/hello")
 public class HelloController {
 
 
