@@ -35,6 +35,12 @@
             <version>1.2.2.RELEASE</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.xiaoniu.architecture</groupId>
+            <artifactId>xiaoniu-spring-boot-starter-mongodb</artifactId>
+            <version>1.4.0.RELEASE</version>
+        </dependency>
+
         <!--<dependency>-->
             <!--<groupId>com.xiaoniu.common.core</groupId>-->
             <!--<artifactId>xiaoniu-spring-redis</artifactId>-->

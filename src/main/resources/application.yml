@@ -15,3 +15,7 @@ spring:
     multipart:
       max-file-size: 10MB
       max-request-size: 10MB
+  data:
+    mongodb:
+      uri: mongodb://myAdmin:admin123@139.196.100.40:27017/admin
+
